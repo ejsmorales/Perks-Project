@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+             xmlns:local="clr-namespace:PerksByDaylightV2.Models"
+             x:Class="PerksByDaylightV2.PerkType">
+
+    <!--<controls:AnimationPage.PageAnimation>
+        <controls:SlidePageAnimation Duration="Short" Type="Fade" Subtype="Default"/>
+    </controls:AnimationPage.PageAnimation>-->
+
+    <ContentPage.Content>
+        <tabView:SfTabView BackgroundColor="#2b2b2b" VisibleHeaderCount="2" DisplayMode="ImageWithText"  >
+            <tabView:SfTabView.SelectionIndicatorSettings>
+                <tabView:SelectionIndicatorSettings
+                    
+                    Position= "Bottom" 
+                    StrokeThickness="5"/>
+            </tabView:SfTabView.SelectionIndicatorSettings>
+            <tabView:SfTabItem Title="Survivors"  TitleFontColor="#f2f2f2" TitleFontSize="Medium" ImageSource="survivorlogo.png">
+                <tabView:SfTabItem.Content>
+                    <Grid BackgroundColor="#2b2b2b" x:Name="SurvivorPerkType">
+                        <ListView x:Name="SurvivorList" 
+                                  ItemsSource = "{Binding SurvivorTypeList}"
+                                  RowHeight="75"
+                                  ItemTapped="SurvivorList_ItemTapped"
+                                  >
+
+                            <ListView.BindingContext>
+                                <local:MenuClass/>
+                            </ListView.BindingContext>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout Orientation="Vertical" Margin="30,0,0,0" VerticalOptions="Center" >
+                                            <Label 
+                                                Text="{Binding PerkType}"
+                                                TextColor="#f2f2f2"
+                                                FontSize="Default" 
+                                                LineHeight="0.5"/>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+            <tabView:SfTabItem Title="Killers" TitleFontColor="#f2f2f2" TitleFontSize="Medium" ImageSource="killerlogo.png">
+                <tabView:SfTabItem.Content>
+                    <Grid BackgroundColor="#2b2b2b" x:Name="KillerPerkType">
+                        <ListView x:Name="KillerList" 
+                                  ItemsSource = "{Binding KillerTypeList}"
+                                  RowHeight="75"
+                                  ItemTapped="KillerList_ItemTapped">
+                            <ListView.BindingContext>
+                                <local:MenuClass/>
+                            </ListView.BindingContext>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout Orientation="Vertical" Margin="30,0,0,0" VerticalOptions="Center" >
+                                            <Label 
+                                                Text="{Binding PerkType}"
+                                                TextColor="#f2f2f2"
+                                                FontSize="Default" 
+                                                 />
+
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </tabView:SfTabItem.Content>
+            </tabView:SfTabItem>
+        </tabView:SfTabView>
+
+    </ContentPage.Content>
+</ContentPage>

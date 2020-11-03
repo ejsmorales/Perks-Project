@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PerksByDaylightV2.PerkInformationPage"
+             xmlns:local="clr-namespace:PerksByDaylightV2"
+             BackgroundColor="#2b2b2b">
+
+    <!--<controls:AnimationPage.PageAnimation>
+        <controls:SlidePageAnimation Duration="Short" Type="Fade" Subtype="Default"/>
+    </controls:AnimationPage.PageAnimation>-->
+    <!--Start block to add resources to convert byte to image-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ByteArrayToImageSourceConverter x:Key="ByteArrayToImage" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <!--End block-->
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal"/>
+            <ListView x:Name="myList" HasUnevenRows="True" >
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <!--<TextCell Text="{Binding PerkName}" Detail="{Binding Description}" TextColor="#C00303"/>-->
+                        <!--Is enabled is disabling highlighting-->
+                        <ViewCell IsEnabled="False">
+                            <StackLayout 
+                        Orientation="Vertical">
+                                <StackLayout Orientation="Vertical">
+                                    <Image Image.Source="{Binding Image, Converter={StaticResource ByteArrayToImage}}"
+                                           HorizontalOptions="Start"
+                                           WidthRequest="75"
+                                           IsVisible="true"
+                                           Margin="10"
+                                           
+                                           />
+
+
+                                    <Label Text="{Binding PerkName}"
+                                           WidthRequest="300"
+                                           TextColor= "#f2f2f2"
+                                           Margin="10"
+                                           FontAttributes="Bold"/>
+
+                                    <Label Text="{Binding Description}"
+                                           TextColor="#f2f2f2" 
+                                           WidthRequest="700"
+                                           Margin="10"
+                                           FontSize="Medium"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
