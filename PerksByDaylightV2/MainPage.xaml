@@ -8,13 +8,10 @@
     xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
         <controls:SlidePageAnimation Duration="Short" Type="Slide" Subtype="FromTop"/>
     </controls:AnimationPage.PageAnimation>-->
-
+    <ScrollView>
     <StackLayout>
 
-        <Frame BackgroundColor="#2b2b2b" Padding="15" CornerRadius="0">
-            <Label Text="Perks by Daylight" HorizontalTextAlignment="Center" TextColor="#f2f2f2" FontSize="36" />
-
-        </Frame>
+        
         <BoxView />
         <Button Text="Perk Types"   
                 CornerRadius="0" TextColor="#f2f2f2" BackgroundColor="#2b2b2b" FontSize="22" FontAttributes="Bold"
@@ -44,5 +41,5 @@
 
 
     </StackLayout>
-
+    </ScrollView>
 </ContentPage>
