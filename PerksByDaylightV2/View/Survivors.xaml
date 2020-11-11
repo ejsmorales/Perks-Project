@@ -19,7 +19,7 @@
 
         <ListView.ItemTemplate>
             <DataTemplate>
-                <ImageCell ImageSource="{Binding CharacterPicture}" Text="{Binding CharacterName}" TextColor="#f2f2f2"  />
+                <ImageCell ImageSource="{Binding CharacterPicture}" Text="{Binding CharacterName}" TextColor="#f2f2f2" />
             </DataTemplate>
         </ListView.ItemTemplate>
 
