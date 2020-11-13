@@ -15,9 +15,19 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <!--End block-->
-
+      
     <ContentPage.Content>
+        
         <StackLayout>
+            <!--<Frame BackgroundColor="#2b2b2b" HeightRequest="60">
+                <Label x:Name="myName" Text="{Binding CharacterName}" TextColor="#f2f2f2"></Label>
+                --><!----><!--
+                
+            </Frame>-->
+            
+            <Image x:Name="myPicture" Source="{Binding CharacterPicture}" HeightRequest="60" WidthRequest="45"></Image>
+            <Label x:Name="myName" Text="{Binding CharacterName}" TextColor="#f2f2f2" HorizontalOptions="Center"></Label>
+            
             <StackLayout Orientation="Horizontal"/>
             <ListView x:Name="myList" HasUnevenRows="True" >
 
@@ -49,6 +59,8 @@
                                            WidthRequest="700"
                                            Margin="10"
                                            FontSize="Medium"/>
+
+                                    <BoxView BackgroundColor="DarkSlateGray" HeightRequest="0.5" Margin="0,15,0,15"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>

@@ -59,7 +59,7 @@ namespace PerksByDaylightV2
                 return;
             string role = "Survivor";
             //await DisplayAlert("ok",message.CharacterName.ToString(),"ok");
-            await Navigation.PushAsync(new PerkInformationPage(message.CharacterName.ToString(), role), true);
+            await Navigation.PushAsync(new PerkInformationPage(message.CharacterName.ToString(), role, message.CharacterPicture.ToString()), true);
             //Deselect Item
             ((ListView)sender).SelectedItem = null;
 

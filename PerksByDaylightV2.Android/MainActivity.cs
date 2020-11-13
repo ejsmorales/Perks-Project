@@ -53,7 +53,7 @@ namespace PerksByDaylightV2.Droid
                     connection.CreateTable<Models.PerksByDaylight>();
                     var myVersion = (from Perks in connection.Table<Models.PerksByDaylight>() where Perks.ID == 0 select Perks.Version).FirstOrDefault();
                     //this If statement checks the version in the device is the same as the included db, if they arent it will overwrite the SQLite DB
-                    if (myVersion != 2)
+                    if (myVersion != 5)
 
                     {
                         using (BinaryReader br = new BinaryReader(Android.App.Application.Context.Assets.Open(dbName)))

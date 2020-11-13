@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using Syncfusion.XForms.AvatarView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,11 @@ namespace PerksByDaylightV2
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PerkInformationPage : ContentPage
     {
-        public PerkInformationPage(string name, string role)
+        public PerkInformationPage(string name, string role, string picture)
         {
             InitializeComponent();
+            myName.Text = name;
+            myPicture.Source = picture;
             LoadPerks(name, role);
         }
 
@@ -33,7 +36,7 @@ namespace PerksByDaylightV2
 
 
                 myList.ItemsSource = myQuery;
-
+                
             }
         }
     }

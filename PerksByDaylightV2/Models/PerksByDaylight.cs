@@ -24,5 +24,7 @@ namespace PerksByDaylightV2.Models
         public string Type { get; set; }
 
         public string Picture { get; set; }
+        public string Portrait { get; set; }
+
     }
 }

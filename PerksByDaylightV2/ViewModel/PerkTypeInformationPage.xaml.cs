@@ -30,7 +30,6 @@ namespace PerksByDaylightV2
                 var myQuery = (from Perks in connection.Table<Models.PerksByDaylight>() where Perks.Type.Contains(type) && Perks.Role == role select Perks).ToList();
 
                 myList.ItemsSource = myQuery;
-
             }
         }
     }
