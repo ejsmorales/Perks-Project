@@ -32,6 +32,7 @@ namespace PerksByDaylightV2
                 Items.Add(new Models.MenuClass { CharacterName = "David King", CharacterPicture = "david.png" });
                 Items.Add(new Models.MenuClass { CharacterName = "Detective David Tapp", CharacterPicture = "tapp.png" });
                 Items.Add(new Models.MenuClass { CharacterName = "Dwight Fairfield", CharacterPicture = "dwight.png" });
+                Items.Add(new Models.MenuClass { CharacterName = "Élodie Rakoto", CharacterPicture = "elodie.png" });
                 Items.Add(new Models.MenuClass { CharacterName = "Felix Richter", CharacterPicture = "felix.png" });
                 Items.Add(new Models.MenuClass { CharacterName = "Feng Min", CharacterPicture = "feng.png" });
                 Items.Add(new Models.MenuClass { CharacterName = "Jake Park", CharacterPicture = "jake.png" });

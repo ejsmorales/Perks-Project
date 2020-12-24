@@ -4,16 +4,13 @@
              x:Class="PerksByDaylightV2.Survivors"
              BackgroundColor="#2b2b2b">
 
-    <!--<controls:AnimationPage.PageAnimation>
-        <controls:SlidePageAnimation Duration="Short" Type="Fade" Subtype="Default"/>
-    </controls:AnimationPage.PageAnimation>-->
+   
 
 
     <ListView x:Name="MyListView"
             ItemsSource="{Binding Items}"
             ItemSelected="MyListView_ItemSelected"
             CachingStrategy="RecycleElement">
-        <!--Built in Cells-->
 
 
 
@@ -23,20 +20,6 @@
             </DataTemplate>
         </ListView.ItemTemplate>
 
-        <!--Custom View Cells-->
-        <!--
-    <ListView.ItemTemplate>
-      <DataTemplate>
-        <ViewCell>
-          <StackLayout>
-            <Label Text="{Binding Text}" 
-                   Style="{DynamicResource ListItemTextStyle}" />
-            <Label Text="{Binding Detail}" 
-                   Style="{DynamicResource ListItemDetailTextStyle}"/>
-          </StackLayout>
-        </ViewCell>
-      </DataTemplate>
-    </ListView.ItemTemplate>
-    -->
+     
     </ListView>
 </ContentPage>

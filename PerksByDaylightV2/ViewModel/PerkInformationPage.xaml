@@ -5,9 +5,7 @@
              xmlns:local="clr-namespace:PerksByDaylightV2"
              BackgroundColor="#2b2b2b">
 
-    <!--<controls:AnimationPage.PageAnimation>
-        <controls:SlidePageAnimation Duration="Short" Type="Fade" Subtype="Default"/>
-    </controls:AnimationPage.PageAnimation>-->
+    
     <!--Start block to add resources to convert byte to image-->
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -19,11 +17,7 @@
     <ContentPage.Content>
         
         <StackLayout>
-            <!--<Frame BackgroundColor="#2b2b2b" HeightRequest="60">
-                <Label x:Name="myName" Text="{Binding CharacterName}" TextColor="#f2f2f2"></Label>
-                --><!----><!--
-                
-            </Frame>-->
+            
             
             <Image x:Name="myPicture" Source="{Binding CharacterPicture}" HeightRequest="60" WidthRequest="45"></Image>
             <Label x:Name="myName" Text="{Binding CharacterName}" TextColor="#f2f2f2" HorizontalOptions="Center"></Label>
@@ -33,8 +27,7 @@
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <!--<TextCell Text="{Binding PerkName}" Detail="{Binding Description}" TextColor="#C00303"/>-->
-                        <!--Is enabled is disabling highlighting-->
+                       
                         <ViewCell IsEnabled="False">
                             <StackLayout 
                         Orientation="Vertical">

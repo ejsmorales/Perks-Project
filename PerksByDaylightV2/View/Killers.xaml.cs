@@ -43,6 +43,7 @@ namespace PerksByDaylightV2
                 Items.Add(new MenuClass { CharacterName = "The Shape", CharacterPicture = "shape.png" });
                 Items.Add(new MenuClass { CharacterName = "The Spirit", CharacterPicture = "spirit.png" });
                 Items.Add(new MenuClass { CharacterName = "The Trapper", CharacterPicture = "trapper.png" });
+                Items.Add(new MenuClass { CharacterName = "The Twins", CharacterPicture = "twins.png" });
                 Items.Add(new MenuClass { CharacterName = "The Wraith", CharacterPicture = "wraith.png" });
             };
             MyListView.ItemsSource = Items;

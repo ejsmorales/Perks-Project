@@ -60,6 +60,7 @@ namespace PerksByDaylightV2
             KillerTypeList.Add(new MenuClass { PerkType = "Exposed", Number = 7317750 });
             KillerTypeList.Add(new MenuClass { PerkType = "Anti Healing", Number = 7363750 });
             KillerTypeList.Add(new MenuClass { PerkType = "Bloodpoints", Number = 7323250 });
+            KillerTypeList.Add(new MenuClass { PerkType = "Buff", Number = 7239121 });
             KillerTypeList.Add(new MenuClass { PerkType = "Hooking", Number = 7239121 });
             KillerTypeList.Add(new MenuClass { PerkType = "Blindness/Oblivious", Number = 2329823 });
             KillerTypeList.Add(new MenuClass { PerkType = "Obsession", Number = 8013481 });
@@ -95,7 +96,6 @@ namespace PerksByDaylightV2
             if (e.Item == null)
                 return;
             string role = "Killer";
-            //await DisplayAlert("ok",message.PerkType.ToString(),"ok");
             await Navigation.PushAsync(new PerkTypeInformationPage(message.PerkType.ToString(), role),true);
             //Deselect Item
             ((ListView)sender).SelectedItem = null;

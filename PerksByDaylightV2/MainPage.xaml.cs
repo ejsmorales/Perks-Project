@@ -26,8 +26,7 @@ namespace PerksByDaylightV2
 
         private async void SynergiesButton_Clicked(object sender, EventArgs e)
         {
-            // await Navigation.PushAsync(new Synergies());
-            //await Navigation.PushAsync(new PerkTypeTabbedPage());
+           
             await Navigation.PushAsync(new PerkType(), true);
         }
     }

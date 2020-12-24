@@ -4,10 +4,7 @@
              x:Class="PerksByDaylightV2.MainPage"
              BackgroundColor="#2b2b2b">
 
-    <!--<controls:AnimationPage.PageAnimation>
-    xmlns:controls="clr-namespace:FormsControls.Base;assembly=FormsControls.Base"
-        <controls:SlidePageAnimation Duration="Short" Type="Slide" Subtype="FromTop"/>
-    </controls:AnimationPage.PageAnimation>-->
+   
     <ScrollView>
     <StackLayout>
 
